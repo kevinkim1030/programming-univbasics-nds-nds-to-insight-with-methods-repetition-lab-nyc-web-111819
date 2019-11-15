@@ -41,16 +41,10 @@ def total_gross(source)
   total = 0 
   while index < directors_name_hash.length do
     name = directors_name_hash[index]
-    total += directors_totals_hash[
-    binding.pry 
-    while directors_index < directors_totals(source)[index][:name].length do 
-      
-      total += gross_for_director
-      directors_index += 1 
-    end
-    index += 1 
-    total 
+    total += directors_totals_hash[name]
+      index += 1 
   end
+  total
 end
   # Write this implementation
   #
