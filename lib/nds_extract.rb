@@ -35,10 +35,13 @@ def list_of_directors(source)
 end
 
 def total_gross(source)
-  total = 0 
+  directors_totals_hash = directors_totals(source)
+  directors_name_hash = list_of_directors(source)
   index = 0 
-  while index < directors_totals(source).length do
-    directors_index = 0 
+  total = 0 
+  while index < directors_name_hash.length do
+    name = directors_name_hash[index]
+    total += directors_totals_hash[
     binding.pry 
     while directors_index < directors_totals(source)[index][:name].length do 
       
@@ -48,6 +51,7 @@ def total_gross(source)
     index += 1 
     total 
   end
+end
   # Write this implementation
   #
   # Should use methods:
@@ -58,6 +62,6 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
   total
-end
+
 
 
