@@ -37,7 +37,7 @@ end
 def total_gross(source)
   total = 0 
   index = 0 
-  while index < source.length do
+  while index < directors_totals(source).length do
     directors_index = 0 
     binding.pry 
     while directors_index < source[index][:name].length do 
