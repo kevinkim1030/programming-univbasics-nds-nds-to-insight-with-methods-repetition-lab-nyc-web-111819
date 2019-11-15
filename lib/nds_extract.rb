@@ -44,6 +44,7 @@ def total_gross(source)
       directors_index += 1 
     end
     index += 1 
+    total 
   end
   # Write this implementation
   #
